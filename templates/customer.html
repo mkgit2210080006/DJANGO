@@ -1,0 +1,13 @@
+<h1>Customer Name: {{cust}}</h1>
+
+<h1>Orders made by {{cust}}</h1>
+<table class="table">
+    {% for i in ord %}
+    <tr>
+        <td>
+            {{i.product}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h1> Number of orders by {{cust}}: {{ord_count}}</h1>

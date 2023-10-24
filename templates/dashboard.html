@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h1>Dashboard</h1></center><br><br>
+<table class="table">
+    <tr>
+        <th>URL</th>
+        <th>Name</th>
+        <th>Age</th>        
+    </tr>
+    {% for customer in customers %}
+    <tr>
+        <td><a href="{% url 'customer' customer.id %}">View</a></td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.age}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+<a href="{% url 'home' %}"><button type="button" class="btn btn-success">Home</button></a>
+{% endblock %}
